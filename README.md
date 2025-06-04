@@ -1,8 +1,8 @@
-#SEC-Based Prompt Collection for LLMs
+SEC-Based Prompt Collection for LLMs
 
 This repository outlines a scalable, quality-first data collection system designed to generate high-quality financial prompts and answers from U.S. SEC filings (10-K and 10-Q). The project supports the development and evaluation of large language models (LLMs) by producing document-grounded, factual QA pairs with verifiable reasoning across corporate financial reports.
 
-##📌 Overview
+📌 Overview
 
 This project addresses the growing need for complex, real-world prompt–response datasets grounded in regulated financial disclosures. The design prioritizes:
 
@@ -12,14 +12,14 @@ Peer-reviewed QA pipelines
 Compensation aligned with task difficulty and quality
 Topical coverage across industries and filing types
 
-##🧭 Table of Contents
+🧭 Table of Contents
 
 Qualification Framework
 Annotation Workflow
 Quality Assurance Process
 Compensation Model
 
-##1. Qualification Framework
+1. Qualification Framework
 
 Contributors are stratified through a two-phase qualification system:
 
@@ -31,7 +31,7 @@ Complex comparison prompts using 10-Qs from General Motors, Ford, and Tesla
 Evaluates analytical depth, synthesis, and precision
 🔍 Pass Criteria: Citation accuracy, clarity of reasoning, and structure
 
-##2. Annotation Workflow
+2. Annotation Workflow
 
 Workers generate prompts in three categories:
 
@@ -55,7 +55,7 @@ Reviewer Ratings: 1–5 scale with clear revision guidance
 Corrective Action: Feedback, temporary suspensions, and deactivation for low-performing workers
 🔁 Mid-quality submissions (rated 3) are returned for revision with structured feedback.
 
-##4. Compensation Model
+4. Compensation Model
 
 Task Type	Rate	Hourly (est.)
 Category A	$2.00	~$17/hr
