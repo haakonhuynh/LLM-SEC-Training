@@ -1,74 +1,96 @@
-SEC-Based Prompt Collection for LLMs
+# SEC-Based Prompt Collection for LLMs
 
-This repository outlines a scalable, quality-first data collection system designed to generate high-quality financial prompts and answers from U.S. SEC filings (10-K and 10-Q). The project supports the development and evaluation of large language models (LLMs) by producing document-grounded, factual QA pairs with verifiable reasoning across corporate financial reports.
+A system for generating high-quality financial Q&A data from SEC filings. Built for scale, precision, and real-world evaluation of large language models.
 
-📌 Overview
+---
 
-This project addresses the growing need for complex, real-world prompt–response datasets grounded in regulated financial disclosures. The design prioritizes:
+## 📌 Why This Exists
 
-Worker stratification by skill level
-Prompt variety and complexity
-Peer-reviewed QA pipelines
-Compensation aligned with task difficulty and quality
-Topical coverage across industries and filing types
+Most language models still struggle with financial reasoning grounded in real documents. This project tackles that by creating a scalable, quality-first pipeline to extract factual, well-cited prompts and answers directly from SEC filings (10-Ks and 10-Qs). The goal is simple: bridge the gap between language models and complex financial disclosures—with a human in the feedback loop. 
 
-🧭 Table of Contents
+---
 
-Qualification Framework
-Annotation Workflow
-Quality Assurance Process
-Compensation Model
+## 🧠 What Makes It Different
 
-1. Qualification Framework
+This isn’t another annotation project. It’s designed from the ground up to ensure:
+- **Contributor stratification** by skill level  
+- **Prompt diversity** across formats and complexity  
+- **Multi-tiered peer review** with actionable QA feedback  
+- **Compensation tied to difficulty and accuracy**  
+- **Coverage across industries and filing types**
 
-Contributors are stratified through a two-phase qualification system:
+---
 
-Phase 1 – Baseline Skills
-Simple factual prompts from a single 10-K filing (e.g., NVIDIA)
-Tests document literacy and financial comprehension
-Phase 2 – Multi-Document Analysis
-Complex comparison prompts using 10-Qs from General Motors, Ford, and Tesla
-Evaluates analytical depth, synthesis, and precision
-🔍 Pass Criteria: Citation accuracy, clarity of reasoning, and structure
+## 🧭 Table of Contents
 
-2. Annotation Workflow
+1. [Qualification Framework](#1-qualification-framework)  
+2. [Annotation Workflow](#2-annotation-workflow)  
+3. [Quality Assurance Process](#3-quality-assurance-process)  
+4. [Compensation Model](#4-compensation-model)
 
-Workers generate prompts in three categories:
+---
 
-Category	Description	Task Type	Time (est.)
-A	Simple factual questions from 1 document	Easy	6–8 mins
-B	Analytical prompts from 1 document	Moderate	10–12 mins
-C	Comparative questions across 2–5 docs	Advanced	20–25 mins
-A centralized Google Sheet provides vetted SEC filings by:
+## 1. Qualification Framework
 
-Company
-Filing type (10-K or 10-Q)
-Filing date (Oct 2023 or later)
-Direct SEC URL and saved PDF
-3. Quality Assurance Process
+Contributors are onboarded via a two-phase system that tests both financial literacy and synthesis ability.
 
-The QA system includes:
+- **Phase 1 – Baseline Skills**  
+  Create factual prompts from a single 10-K (e.g., NVIDIA).  
+  ✦ Goal: test comprehension, citation accuracy, and structure.
 
-Peer Review: Tiered reviewer qualifications for each category
-Spot Audits: Random audits by the project manager to ensure consistency
-Reviewer Ratings: 1–5 scale with clear revision guidance
-Corrective Action: Feedback, temporary suspensions, and deactivation for low-performing workers
-🔁 Mid-quality submissions (rated 3) are returned for revision with structured feedback.
+- **Phase 2 – Multi-Document Analysis**  
+  Analyze and compare filings across General Motors, Ford, and Tesla.  
+  ✦ Goal: evaluate reasoning depth, synthesis, and attention to nuance.
 
-4. Compensation Model
+---
 
-Task Type	Rate	Hourly (est.)
-Category A	$2.00	~$17/hr
-Category B	$3.25	~$17.75/hr
-Category C	$8.25	~$22/hr
-Bonuses:
+## 2. Annotation Workflow
 
-🎯 Accuracy Bonus: $5 for 5+ prompts with average rating ≥ 4.5
-⚙️ Complexity Bonus: $10 for 5+ Category C completions
-This hybrid system balances fairness, performance incentives, and annotation throughput.
+Prompts fall into three categories:
 
+| Category | Description                             | Type     | Time (est.) |
+|----------|-----------------------------------------|----------|-------------|
+| A        | Factual from a single document          | Easy     | 6–8 mins    |
+| B        | Analytical from one document            | Moderate | 10–12 mins  |
+| C        | Comparative across 2–5 filings          | Advanced | 20–25 mins  |
 
+Each prompt must be grounded in a real filing, selected from a vetted sheet organized by:
+- Company  
+- Filing type (10-K or 10-Q)  
+- Filing date (Oct 2023 or later)  
+- Direct SEC link and saved PDF
 
-🔗 License
+---
 
-This project is proprietary and distributed solely for demonstration and hiring purposes. Do not reproduce or redistribute without written permission.
+## 3. Quality Assurance Process
+
+We built the QA system with a reviewer-tiered structure to prioritize consistency without sacrificing throughput:
+
+- **Peer Review:** All submissions are reviewed by trained annotators with category-specific approval  
+- **Spot Audits:** Random checks by the project lead for quality control  
+- **Structured Feedback:** Submissions rated "3" (mid-tier) are returned for revision with guidance  
+- **Accountability:** Repeated low performance leads to temporary suspension or removal  
+
+---
+
+## 4. Compensation Model
+
+| Category    | Rate   | Hourly (est.) |
+|-------------|--------|---------------|
+| A (Easy)    | $2.00  | ~$17/hr       |
+| B (Moderate)| $3.25  | ~$17.75/hr    |
+| C (Advanced)| $8.25  | ~$22/hr       |
+
+**Bonuses:**  
+🎯 *Accuracy Bonus* – $5 for 5+ prompts rated ≥ 4.5  
+⚙️ *Complexity Bonus* – $10 for 5+ Category C completions
+
+This model rewards both speed and thoughtfulness. Because real-world QA is more than just a numbers game.
+
+---
+
+## 🔗 License
+
+This project is proprietary and shared for demonstration and hiring purposes only.  
+Please do not reproduce or distribute without written permission.
+
