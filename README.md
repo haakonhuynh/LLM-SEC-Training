@@ -6,7 +6,7 @@ A system for generating high-quality financial Q&A data from SEC filings. Built 
 
 ## 📌 Why This Exists
 
-Most language models still struggle with financial reasoning grounded in real documents. This project tackles that by creating a scalable, quality-first pipeline to extract factual, well-cited prompts and answers directly from SEC filings (10-Ks and 10-Qs). The goal is simple: bridge the gap between language models and complex financial disclosures—with a human in the feedback loop. 
+Most language models still struggle with financial reasoning grounded in real documents. This project tackles that by creating a scalable, quality-first pipeline to extract factual, well-cited prompts and answers directly from SEC filings (10-Ks and 10-Qs). The goal is simple: enable LLMs to read complex financial disclosures with a human in the feedback loop. 
 
 ---
 
